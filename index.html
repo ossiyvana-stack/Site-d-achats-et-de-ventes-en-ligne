@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de vente en ligne</title>
+    <link rel="icon" href="c:\Users\ossiy\OneDrive\Pictures\Achats-en-ligne.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><i>NOTRE boutique en ligne</i></h1>
+        <nav>
+            <button id="btnEspaceVendeur">Espace Vendeur</button>
+            <button id="btnEspaceCommande">Espace Commandes</button>
+            <button id="btnPanier">🛒</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="zone-recherche">
+            <input type="text" id="recherche" placeholder= "Rechercher un produit">
+            <button onclick="rechercher()">Rechercher</button>
+        </div>
+        <section id="produits">
+            <h2><b><u><i>Nos Produits</i></u></b></h2>
+            <div id="listeProduits"></div>
+        </section>
+
+        <section id="panier" class="hidden">
+            <h3><i>Panier</i></h3>
+            <hr>
+            <ul id="listePanier"></ul>
+            <p>Total: <span id="totalPanier">0</span> €</p>
+            <button id="btnCommander">Commander</button>
+        </section>
+
+        <section id="espaceVendeur" class="hidden">
+            <h3><i><mark>Ajouter un Produit</mark></i></h3>
+            <form id="formAjouterProduit">
+                <input type="text" placeholder="Nom du produit" id="produitNom" required>
+                <br>
+                <input type="number" placeholder="Prix" id="produitPrix" required>
+                <br>
+                <input type="URL" placeholder="image" id="produitImage" required>
+                <h4>                </h4>
+                <button type="submit">Ajouter</button>
+            </form>
+            <h4><i><mark>Vos Produits</mark></i></h4>
+            <div id="produitsVendeur"></div>
+        </section>
+
+        <section id="espaceCommande" class="hidden">
+            <h2><u><i><mark>Commandes</mark></i></u></h2>
+            <div id="listeCommandes"></div>
+        </section>
+    </main>
+
+    <div id="modalPaiement" class="hidden">
+        <h3><u><i>Informations de paiement</i></u></h3>
+        <form id="formPaiement">
+            <input type="text" placeholder="Nom complet" required>
+            <input type="text" placeholder="Adresse" required>
+            <input type="text" placeholder="Carte bancaire" required>
+            <ol>
+            <button type="submit">Valider</button>
+            <button type="button" id="btnAnnulerPaiement">Annuler</button>
+            </ol>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
