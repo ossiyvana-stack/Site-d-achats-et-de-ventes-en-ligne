@@ -68,10 +68,10 @@ function afficherPanier() {
     totalPanier.textContent = total.toFixed(2);
 }
 
-// --- fonction à portée globale ---
+
 function supprimerDuPanier(index) {
-    panier.splice(index, 1); // supprime le produit à l'index donné
-    afficherPanier();         // met à jour l'affichage du panier
+    panier.splice(index, 1);
+    afficherPanier();
 }
 btnCommander.addEventListener("click", () => {
     if (panier.length === 0) return alert("Le panier est vide !");
@@ -93,7 +93,7 @@ document.getElementById("formPaiement").addEventListener("submit", (e) => {
     alert("Commande passée !");
 });
 
-// Espace Vendeur
+
 btnEspaceVendeur.addEventListener("click", () => {
     espaceVendeur.classList.toggle("hidden");
     espaceCommande.classList.add("hidden");
@@ -146,7 +146,7 @@ function supprimerProduit(id) {
     }
 }
 
-// Espace Commandes
+
 function afficherCommandes() {
     listeCommandesDiv.innerHTML = "";
     commandes.forEach((c, i) => {

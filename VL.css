@@ -184,9 +184,9 @@ u {
     background: #0d6efd;
 }
 #panier{
-    position: fixed;      /* permet de se superposer */
-    top: 80px;            /* distance depuis le haut */
-    right: 20px;          /* position à droite */
+    position: fixed;
+    top: 80px;
+    right: 20px;
     width: 300px;
     max-height: 400px;
 
@@ -196,7 +196,7 @@ u {
 
     background: linear-gradient(to bottom, rgb(131,131,234), white);
 
-    z-index: 1000;        /* passe au-dessus des produits */
+    z-index: 1000;
 }
 #listePanier{
     max-height: 200px;
